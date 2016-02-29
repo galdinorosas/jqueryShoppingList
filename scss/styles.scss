@@ -1,1 +1,92 @@
+body {
+    margin: 0;
+}
 
+.mainHeader {
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 3em;
+}
+
+.shoppingListContainer {
+    width: 40em;
+    height: 30em;
+    margin: 2em auto;
+    border: 1px solid black;
+    .itemInput {
+        width: 35em;
+        height: 6em;
+        margin: 0 auto;
+        border-bottom: 1px solid black;
+        th {
+            width: 7em;
+            height: 1em;
+        }
+        td {
+            width: 10em;
+            height: 1em;
+            padding-left: 1.5em;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 12em;
+            height: 1.5em;
+            text-align: center;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .submitButton {
+            margin: 1em 0em 0em 21.5em;
+            width: 8em;
+            height: 2.5em;
+            border-radius: 2px;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+
+    .itemList{
+
+		.itemContainer {
+	        height: 3em;
+	        width: 35em;
+	        background-color: lightblue;
+	        margin: 1em auto;
+	        border: lightgrey solid 1px;
+	        border-radius: 3px;
+	        .itemText {
+	            width: 28em;
+	            height: 2em;
+	            float: left;
+	            margin: 0.5em 0em 0em 0em;
+	            line-height: 2em;
+	            font-size: 0.9em;
+	            overflow: scroll;
+	        }
+	        span {
+	            margin: 0em 1em 0em 0em;
+	        }
+	        .itemCheckbox {
+	            float: left;
+	            width: 4em;
+	            height: 4em;
+	            margin: 0em 0em 0em 2em;
+	            cursor: pointer;
+	        }
+	        .deleteButton {
+	            margin: 1em 0em 0em 0em;
+	            width: 6em;
+	            height: 2em;
+	            border-radius: 2px;
+	            border: 0;
+	            cursor: pointer;
+	            background-color: red;
+	        }
+	    }
+
+
+    }
+}

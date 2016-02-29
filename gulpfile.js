@@ -16,7 +16,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
-var browserSync = require('browser-sync').create();
+// var browserSync = require('browser-sync').create();
 
 
 
@@ -36,13 +36,21 @@ gulp.task('jshint', function() {
 //         .pipe(gulp.dest('public/css/minified/'));
 // });
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
+// gulp.task('browser-sync', function() {
+//     browserSync.init({
+//         server: {
+//             // baseDir: "./,./public/css/styles.css"
+//             files: ["public/css/style.css", "index.html"]
+//         }
+//     });
+// });
+
+
+// gulp.task('browser-sync', function() {
+//     browserSync.init({
+//         proxy: "./"
+//     });
+// });
 
 
 gulp.task('css', function() {
@@ -56,7 +64,6 @@ gulp.task('css', function() {
         .pipe(rename('gulpedStyles.css'))
         .pipe(gulp.dest('public/css/autoprefixed'));
 });
-
 
 // Compile Sass task
 gulp.task('sass', function() {
@@ -110,4 +117,4 @@ gulp.task('images', function() {
 gulp.task('build', ['jshint', 'html', 'scripts', 'images', 'css']);
 
 // Default task
-gulp.task('default', ['jshint', 'sass', 'browser-sync', 'watch']);
+gulp.task('default', ['jshint', 'sass', 'watch']);
