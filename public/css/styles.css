@@ -115,11 +115,11 @@ footer {
     border-radius: 2px;
     border: 0;
     cursor: pointer;
-    background-color: lightgrey; }
+    background-color: lightgrey;
+    display: none; }
   footer .restartButton {
     display: none; }
   footer .checkoutMessage {
-    display: none;
     text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

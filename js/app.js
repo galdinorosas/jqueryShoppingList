@@ -12,7 +12,6 @@ $(document).ready(function() {
         }
         else{
             $('.maxItemMessage').css('display','none');
-
             $('input[type="submit"]').prop('disabled', false).css("display","block");
         }
     }
@@ -45,8 +44,6 @@ $(document).ready(function() {
 
         maxItemsButtonDisable();
 
-       
-
     });
 
     
@@ -70,11 +67,17 @@ $(document).ready(function() {
     $('.itemList').on('change','.itemCheckbox', function(event){
         
         if($('.itemCheckbox').is(':checked')){
-            console.log('checked!!!');
+            $('.checkoutMessage').css('display','none');
+            $('.checkoutButton').css('display','block');
         }
         else{
             console.log('not checked!!!');
+            $('.checkoutButton').css('display','none');
+            $('.checkoutMessage').css('display','block');
+            
         }
+
+
         var index = $(event.target).parent().index();
         var toggle = !itemsArray[index].checkbox;
             
@@ -118,21 +121,18 @@ $(document).ready(function() {
         $('.receiptSubtotal').text(subtotal.toFixed(2));
         $('.receiptTotalAmount').text(total.toFixed(2));
 
-
-
-        
-
-
     });
 
     $('.restartButton').on('click', function(){
 
         itemsArray = [];
         $('.itemList').empty();
+        $('.receiptBody').empty();
         $('.receipt').css('display','none');
+        $('.checkoutButton').css('display','none');
+        $('.checkoutMessage').css('display','block');
         $('.restartButton').css('display','none');
         $('.itemInput, .itemList').css('display','block');
-        $('.checkoutButton').css('display','block');
         
     });
 

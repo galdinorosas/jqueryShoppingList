@@ -160,6 +160,7 @@ footer{
         border: 0;
         cursor: pointer;
         background-color: lightgrey;
+        display: none
     }
 
     .restartButton{
@@ -167,7 +168,6 @@ footer{
     }
 
     .checkoutMessage{
-        display: none;
         text-align: center;
     }
 }
