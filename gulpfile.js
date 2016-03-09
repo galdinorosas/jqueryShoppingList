@@ -16,9 +16,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
 var csswring = require('csswring');
-// var browserSync = require('browser-sync').create();
-
-
+var browserSync = require('browser-sync').create();
 
 // To run broswer sync (to make browser auto-update the browser to visually see changes instantly)
 // open a new tab in terminal and run this code: browser-sync start --server --files "css/*.css,index.html"
@@ -26,9 +24,11 @@ var csswring = require('csswring');
 
 gulp.task('jshint', function() {
     return gulp.src('js/*.js')
+        // .pipe(browserify())
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
+
 
 // gulp.task('minify-css', function() {
 //     return gulp.src('public/css/*.css')
@@ -36,22 +36,25 @@ gulp.task('jshint', function() {
 //         .pipe(gulp.dest('public/css/minified/'));
 // });
 
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         server: {
-//             // baseDir: "./,./public/css/styles.css"
-//             files: ["public/css/style.css", "index.html"]
-//         }
-//     });
-// });
+// gulp.task('js-watch', ['jshint'], browserSync.reload);
 
+gulp.task('serve', ['jshint', 'sass'], function () {
 
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         proxy: "./"
-//     });
-// });
+    // Serve files from the root of this project
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 
+    // add browserSync.reload to the tasks array to make
+    // all browsers reload after tasks are complete.
+    // gulp.watch("js/*.js", ['js-watch']);
+    gulp.watch("js/*.js", ['jshint']);
+    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
+    gulp.watch("js/*.js").on('change', browserSync.reload);
+});
 
 gulp.task('css', function() {
     var processors = [
@@ -68,17 +71,18 @@ gulp.task('css', function() {
 // Compile Sass task
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('public/css/'));
+        // .pipe(sourcemaps.write('.', {loadMaps: false}))
+        .pipe(gulp.dest('public/css/'))
+        .pipe(browserSync.stream());
 });
 
 // Watch task
-gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['jshint']);
-    gulp.watch('scss/*.scss', ['sass']);
-});
+// gulp.task('watch', function() {
+    // gulp.watch('js/*.js', ['jshint',browserSync.reload] );
+    // gulp.watch('scss/*.scss', ['sass']);
+// });
 
 
 
@@ -117,4 +121,4 @@ gulp.task('images', function() {
 gulp.task('build', ['jshint', 'html', 'scripts', 'images', 'css']);
 
 // Default task
-gulp.task('default', ['jshint', 'sass', 'watch']);
+gulp.task('default', ['serve']);
