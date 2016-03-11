@@ -52,6 +52,11 @@ $(document).ready(function() {
 
         maxItemsButtonDisable();
 
+        if ($('.itemList').children().length === 0) {
+            $('.checkoutButton').css('display', 'none');
+            $('.checkoutMessage').css('display', "block");
+        }
+
     });
 
     $('.itemList').on('change', '.itemCheckbox', function(event) {
