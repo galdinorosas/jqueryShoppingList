@@ -18,9 +18,10 @@ body {
   .shoppingListContainer .receipt {
     width: 100%;
     height: 100%;
-    background-color: lightgreen;
+    background-color: black;
     display: none;
-    font-family: receiptFonts, Serif; }
+    font-family: receiptFonts, Serif;
+    color: white; }
     .shoppingListContainer .receipt .receiptHeader {
       text-align: center;
       font-size: 2.5em; }
