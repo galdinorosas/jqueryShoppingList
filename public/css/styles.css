@@ -11,7 +11,7 @@ body {
   font-size: 2em; }
 
 .shoppingListContainer {
-  width: 25em;
+  width: 18em;
   height: 38em;
   margin: 0 auto;
   border: 1px solid black; }
@@ -24,29 +24,35 @@ body {
     color: white; }
     .shoppingListContainer .receipt .receiptHeader {
       text-align: center;
-      font-size: 2.5em; }
+      font-size: 1.5em; }
     .shoppingListContainer .receipt .receiptTableHeaders {
-      padding-left: 2em;
+      padding-left: 1em;
       width: 11em;
       height: 2em;
-      text-align: left; }
+      text-align: left;
+      font-size: 0.6em; }
     .shoppingListContainer .receipt .receiptTable td {
       padding-left: 2em;
       width: 11em;
       height: 2em;
-      text-align: left; }
+      text-align: left;
+      font-size: 0.6em; }
     .shoppingListContainer .receipt .receiptTotals {
       text-align: center;
       /* width: 25em; */
       /* height: 0em; */
       margin: 0 auto; }
     .shoppingListContainer .receipt .receiptTotals p {
-      margin-top: 1em; }
+      margin-top: 1em;
+      font-size: 0.75em; }
   .shoppingListContainer .itemInput {
-    width: 24em;
-    height: 6em;
+    width: 16em;
+    height: 8em;
     margin: 0 auto;
-    border-bottom: 1px solid black; }
+    border-bottom: 1px solid black;
+    font-size: 0.8em; }
+    .shoppingListContainer .itemInput .inputTable {
+      margin-left: -2.5em; }
     .shoppingListContainer .itemInput th {
       width: 7em;
       height: 1em; }
@@ -56,7 +62,7 @@ body {
       padding-left: 1em; }
     .shoppingListContainer .itemInput input[type="text"],
     .shoppingListContainer .itemInput input[type="number"] {
-      width: 8em;
+      width: 6em;
       height: 1.5em;
       text-align: center; }
     .shoppingListContainer .itemInput input[type=number]::-webkit-inner-spin-button,
@@ -64,9 +70,9 @@ body {
       -webkit-appearance: none;
       margin: 0; }
     .shoppingListContainer .itemInput .submitButton {
-      margin: 1em 0em 0em 13.5em;
-      width: 8em;
-      height: 2.5em;
+      margin: 1.5em 0em 0em 6em;
+      width: 7em;
+      height: 2em;
       border-radius: 2px;
       border: 0;
       cursor: pointer; }
@@ -75,26 +81,26 @@ body {
       text-align: center; }
   .shoppingListContainer .itemList .itemContainer {
     height: 5em;
-    width: 22em;
+    width: 17em;
     background-color: lightgrey;
     margin: 1em auto;
     border: lightgrey solid 1px;
     border-radius: 3px; }
     .shoppingListContainer .itemList .itemContainer .itemText {
-      width: 15em;
-      height: 4.5em;
+      width: 13em;
+      height: 6.5em;
       float: left;
-      margin: 0.5em 0em 0em 0em;
+      margin: 1em 0em 0em 2em;
       line-height: 2em;
-      font-size: 0.9em;
+      font-size: 0.7em;
       overflow-x: scroll; }
     .shoppingListContainer .itemList .itemContainer span {
       margin: 0em 1em 0em 0em; }
     .shoppingListContainer .itemList .itemContainer .itemCheckbox {
       float: left;
-      width: 4em;
-      height: 4em;
-      margin: 1.5em 0em 0em 2em;
+      width: 1em;
+      height: 1em;
+      margin: 3.25em 0em 0em 2em;
       cursor: pointer; }
     .shoppingListContainer .itemList .itemContainer .deleteButton {
       margin: 2.5em 0em 0em 0.5em;
@@ -107,14 +113,14 @@ body {
       float: left; }
 
 footer {
-  width: 25em;
+  width: 20em;
   height: 5em;
   margin: 0 auto; }
   footer .checkoutButton,
   footer .restartButton {
-    margin: 2em 0em 0em 13.5em;
-    width: 9em;
-    height: 3em;
+    margin: 2em 0em 0em 11em;
+    width: 7em;
+    height: 2em;
     border-radius: 2px;
     border: 0;
     cursor: pointer;
@@ -125,15 +131,17 @@ footer {
   footer .checkoutMessage {
     text-align: center; }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 600px) {
   .shoppingListContainer {
-    width: 38em;
+    width: 34em;
     height: 33em; }
     .shoppingListContainer .itemInput {
-      width: 34em; }
+      width: 38em; }
       .shoppingListContainer .itemInput .submitButton {
-        margin: 1em 0em 0em 19.5em;
+        margin: 1em 0em 0em 17.5em;
         width: 10em; }
+      .shoppingListContainer .itemInput .inputTable {
+        margin-left: 0.5em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
       width: 12em; }
@@ -145,45 +153,75 @@ footer {
         width: 7em;
         height: 2.25em; }
       .shoppingListContainer .itemList .itemContainer .itemText {
-        width: 22em;
-        margin: 0.5em 0em 0em 0em;
-        height: 3.5em; }
+        width: 18em;
+        margin: 0em 0em 0em 2em;
+        height: 3.5em;
+        font-size: 1.05em; }
       .shoppingListContainer .itemList .itemContainer .itemCheckbox {
-        margin: 1em 0em 0em 2em; } }
+        margin: 2.5em 0em 0em 2em; }
+    .shoppingListContainer .receipt .receiptHeader {
+      font-size: 2.5em; }
+    .shoppingListContainer .receipt .receiptTableHeaders {
+      font-size: 1em;
+      padding-left: 2em; }
+    .shoppingListContainer .receipt .receiptTable td {
+      font-size: 1em; }
+    .shoppingListContainer .receipt .receiptTotals p {
+      font-size: 1em; } }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 950px) {
   .mainHeader {
     font-size: 3em; }
   .shoppingListContainer {
-    width: 48em; }
+    width: 53em;
+    height: 34.5em; }
     .shoppingListContainer .receipt .receiptTable {
       margin-left: 3em; }
       .shoppingListContainer .receipt .receiptTable td {
         width: 20em; }
     .shoppingListContainer .itemInput {
-      width: 42em;
-      height: 7em; }
+      width: 57em;
+      height: 9.5em; }
       .shoppingListContainer .itemInput th {
-        font-size: 1.25em; }
+        font-size: 1.4em; }
       .shoppingListContainer .itemInput .submitButton {
-        margin: 1em 0em 0em 25.5em;
+        margin: 1em 0em 0em 28em;
         width: 12em;
         height: 3em; }
+      .shoppingListContainer .itemInput .inputTable {
+        margin-left: -0.5em; }
+      .shoppingListContainer .itemInput .maxItemMessage {
+        font-size: 1.5em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
-      width: 15em;
+      width: 19em;
       height: 2em;
       margin-left: 2em; }
     .shoppingListContainer .itemList .itemContainer {
-      width: 36em; }
+      width: 40em; }
       .shoppingListContainer .itemList .itemContainer .deleteButton {
         width: 8em;
         height: 2.5em; }
       .shoppingListContainer .itemList .itemContainer .itemText {
-        width: 25em;
-        font-size: 1.0em; }
-  footer .checkoutButton,
-  footer .restartButton {
-    margin: 3em 0em 0em 13em;
-    width: 12em;
-    height: 3em; } }
+        width: 23em;
+        font-size: 1.2em; }
+    .shoppingListContainer .receipt .receiptHeader {
+      font-size: 3.25em; }
+    .shoppingListContainer .receipt .receiptTableHeaders {
+      font-size: 1.5em;
+      padding-left: 1em; }
+    .shoppingListContainer .receipt .receiptTable td {
+      font-size: 1em; }
+    .shoppingListContainer .receipt .receiptTotals p {
+      font-size: 1.5em; }
+  footer {
+    width: 25em;
+    font-size: 1.25em; }
+    footer .checkoutMessage {
+      text-align: center;
+      font-size: 1.25em; }
+  footer .restartButton,
+  footer .checkoutButton {
+    margin: 3em 0em 0em 15.5em;
+    width: 14em;
+    height: 4em; } }
