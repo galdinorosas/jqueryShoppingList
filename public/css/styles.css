@@ -70,7 +70,7 @@ html {
     .shoppingListContainer .itemInput td {
       width: 10em;
       height: 1em;
-      padding-left: 0.2em; }
+      padding-left: 0.5em; }
     .shoppingListContainer .itemInput input[type="text"],
     .shoppingListContainer .itemInput input[type="number"] {
       width: 7em;
@@ -81,6 +81,8 @@ html {
       -webkit-appearance: none;
       margin: 0; }
     .shoppingListContainer .itemInput .submitButton {
+      background-color: black;
+      color: lightgrey;
       width: 8em;
       height: 2.5em;
       border-radius: 2px;
@@ -89,23 +91,29 @@ html {
       display: block;
       margin: 0 auto;
       margin-top: 1em;
-      font-size: 0.6em; }
+      font-size: 0.6em;
+      transition: all linear 0.5s; }
+    .shoppingListContainer .itemInput .submitButton:hover {
+      color: white;
+      background-color: blue; }
+    .shoppingListContainer .itemInput .submitButton:active {
+      border: 1px green solid; }
     .shoppingListContainer .itemInput .maxItemMessage {
       display: none;
       text-align: center; }
   .shoppingListContainer .itemList .itemContainer {
     height: 3em;
     width: 18em;
-    background-color: lightgrey;
+    background-color: white;
     margin: 1em auto;
-    border: lightgrey solid 1px;
+    border: black solid 1px;
     border-radius: 3px; }
     .shoppingListContainer .itemList .itemContainer .itemText {
       width: 18em;
       height: 3em;
       float: left;
       overflow-x: scroll;
-      margin: 1.1em 0em 0em 3em;
+      margin: 1.1em 0em 0em 2em;
       line-height: 3em;
       font-size: 0.6em; }
     .shoppingListContainer .itemList .itemContainer span {
@@ -118,7 +126,7 @@ html {
       cursor: pointer; }
     .shoppingListContainer .itemList .itemContainer .deleteButton {
       cursor: pointer;
-      margin: 1em 0em 0em 1.5em; }
+      margin: 1em 0em 0em 2.5em; }
 
 footer .checkoutButton,
 footer .restartButton {
@@ -129,8 +137,15 @@ footer .restartButton {
   border-radius: 2px;
   border: 0;
   cursor: pointer;
-  background-color: lightgrey;
-  display: none; }
+  background-color: black;
+  color: lightgrey;
+  display: none;
+  transition: all 0.5s linear; }
+
+footer .checkoutButton:hover,
+footer .restartButton:hover {
+  background-color: #FF3F34;
+  color: white; }
 
 footer .checkoutMessage {
   text-align: center;
