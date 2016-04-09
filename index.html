@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="public/css/styles.css">
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -52,30 +52,30 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input placeholder="Enter Item Name" class="itemNameInput" type="text" required>
+                                <input placeholder="Name" class="itemNameInput" type="text" required>
                             </td>
                             <td>
-                                <input placeholder="Enter Item Cost" class="itemPriceInput" min="0" step="0.01" type="number" required>
+                                <input placeholder="Cost" class="itemPriceInput" min="0" step="0.01" type="number" required>
                             </td>
                             <td>
-                                <input placeholder="Enter Item Count" class="itemCountInput" min="0" type="number" required>
+                                <input placeholder="Quantity" class="itemCountInput" min="0" type="number" required>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <p class="maxItemMessage">5 Items Only Please.</p>
+                <p class="maxItemMessage">5 Items Only Please</p>
                 <input value="SUBMIT" type="submit" class="submitButton">
             </form>
         </header>
         <section class="itemList">
             <!-- This is the layout for each item that appears. -->
-            <!-- <div class="itemContainer">
-                    <input type="checkbox" class="itemCheckbox">
-                    <p class="itemText">
-                        Name: <span class="itemName">window wipers</span> Total Cost $: <span class="itemTotalCost">1000</span> Item Count: <span class="itemTotalCount">1000</span>
-                    </p>
-                    <input value="DELETE" type="button" class="deleteButton">
-                </div> -->
+<!--             <div class="itemContainer">
+                <input type="checkbox" class="itemCheckbox">
+                <p class="itemText">
+                    Name: <span class="itemName">window wipers</span> Total-Cost-$: <span class="itemTotalCost">1000</span> Item-Count:<span class="itemTotalCount">1000</span>
+                </p>
+                <i class="fa fa-trash fa-1x deleteButton"></i>
+            </div> -->
         </section>
     </section>
     <footer>
@@ -83,6 +83,9 @@
         <input value="CHECKOUT" type="button" class="checkoutButton">
         <input value="RESTART" type="button" class="restartButton">
     </footer>
+    <script defer src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script defer type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>

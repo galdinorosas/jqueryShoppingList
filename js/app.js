@@ -35,7 +35,7 @@ $(document).ready(function() {
 
         itemsArray.push(itemObject);
 
-        var itemHTML = '<div class="itemContainer"> <input type="checkbox" class="itemCheckbox"> <p class="itemText"> Name: <span class="itemName">' + itemObject.name + '</span> Item Cost $: <span class="itemPrice">' + itemObject.price + '</span> Item Count: <span class="itemTotalCount">' + itemObject.count + '</span> </p> <input value="DELETE" type="button" class="deleteButton"> </div>';
+        var itemHTML = '<div class="itemContainer"> <input type="checkbox" class="itemCheckbox"> <span class="itemText"> Name: <span class="itemName">' + itemObject.name + '</span> Item-Cost-$: <span class="itemPrice">' + itemObject.price + '</span> Item-Count: <span class="itemTotalCount">' + itemObject.count + '</span> </span> <i class="fa fa-trash fa-1x deleteButton"></i> </div>';
 
         $('.itemList').append(itemHTML);
 
@@ -95,7 +95,7 @@ $(document).ready(function() {
                 total += (1 + 0.0925) * (itemPrice * itemCount);
                 subtotal += itemPrice * itemCount;
 
-                var itemReceiptHTML = '<tr><td><span>' + itemName + '</span></td><td><span>' + itemCount + '</span></td><td><span>' + itemPrice + '</span></td></tr>';
+                var itemReceiptHTML = '<tr><td><div>' + itemName + '</div></td><td><div>' + itemCount + '</div></td><td><div>' + itemPrice + '</div></td></tr>';
 
                 $('.receiptBody').append(itemReceiptHTML);
 
@@ -112,12 +112,13 @@ $(document).ready(function() {
     $('.restartButton').on('click', function() {
 
         itemsArray = [];
+        maxItemsButtonDisable();
         $('.itemList').empty();
         $('.receiptBody').empty();
         $('.receipt').css('display', 'none');
         $('.checkoutButton').css('display', 'none');
-        $('.checkoutMessage').css('display', 'block');
         $('.restartButton').css('display', 'none');
+        $('.checkoutMessage').css('display', 'block');
         $('.itemInput, .itemList').css('display', 'block');
 
     });

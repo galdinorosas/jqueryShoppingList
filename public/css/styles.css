@@ -5,16 +5,23 @@ body {
   font-family: receiptFonts;
   src: url(../fonts/fake-receipt.ttf); }
 
+html {
+  height: 100%;
+  background: url("../../images/shoppingListBackground-s.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 .mainHeader {
   text-align: center;
   margin: 0.5em;
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 .shoppingListContainer {
-  width: 25em;
-  height: 38em;
   margin: 0 auto;
-  border: 1px solid black; }
+  border: 1px solid black;
+  width: 19em; }
   .shoppingListContainer .receipt {
     width: 100%;
     height: 100%;
@@ -23,36 +30,47 @@ body {
     font-family: receiptFonts, Serif; }
     .shoppingListContainer .receipt .receiptHeader {
       text-align: center;
-      font-size: 2.5em; }
+      font-size: 1.3em; }
     .shoppingListContainer .receipt .receiptTableHeaders {
-      padding-left: 2em;
+      padding-left: 1em;
       width: 11em;
       height: 2em;
+      font-size: 0.75em;
       text-align: left; }
     .shoppingListContainer .receipt .receiptTable td {
-      padding-left: 2em;
+      padding-left: 1em;
       width: 11em;
       height: 2em;
-      text-align: left; }
+      text-align: left;
+      font-size: 0.9em; }
+      .shoppingListContainer .receipt .receiptTable td div {
+        width: 4em;
+        height: 1em;
+        overflow-x: scroll; }
+    .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(2) {
+      padding-left: 3em; }
+    .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(3) {
+      padding-left: 2em; }
     .shoppingListContainer .receipt .receiptTotals {
       text-align: center;
       /* width: 25em; */
       /* height: 0em; */
       margin: 0 auto; }
     .shoppingListContainer .receipt .receiptTotals p {
-      margin-top: 1em; }
+      margin-top: 1em;
+      font-size: 0.9em; }
   .shoppingListContainer .itemInput {
-    width: 24em;
     height: 6em;
     margin: 0 auto;
     border-bottom: 1px solid black; }
     .shoppingListContainer .itemInput th {
       width: 7em;
-      height: 1em; }
+      height: 1em;
+      font-size: 0.9em; }
     .shoppingListContainer .itemInput td {
       width: 10em;
       height: 1em;
-      padding-left: 1em; }
+      padding-left: 0.2em; }
     .shoppingListContainer .itemInput input[type="text"],
     .shoppingListContainer .itemInput input[type="number"] {
       width: 8em;
@@ -63,94 +81,113 @@ body {
       -webkit-appearance: none;
       margin: 0; }
     .shoppingListContainer .itemInput .submitButton {
-      margin: 1em 0em 0em 13.5em;
       width: 8em;
       height: 2.5em;
       border-radius: 2px;
       border: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      margin-top: 1em;
+      font-size: 0.6em; }
     .shoppingListContainer .itemInput .maxItemMessage {
       display: none;
       text-align: center; }
   .shoppingListContainer .itemList .itemContainer {
-    height: 5em;
-    width: 22em;
+    height: 3em;
+    width: 18em;
     background-color: lightgrey;
     margin: 1em auto;
     border: lightgrey solid 1px;
     border-radius: 3px; }
     .shoppingListContainer .itemList .itemContainer .itemText {
-      width: 15em;
-      height: 4.5em;
+      width: 18em;
+      height: 3em;
       float: left;
-      margin: 0.5em 0em 0em 0em;
-      line-height: 2em;
-      font-size: 0.9em;
-      overflow-x: scroll; }
+      overflow-x: scroll;
+      margin: 1.1em 0em 0em 0em;
+      line-height: 3em;
+      font-size: 0.6em; }
     .shoppingListContainer .itemList .itemContainer span {
       margin: 0em 1em 0em 0em; }
     .shoppingListContainer .itemList .itemContainer .itemCheckbox {
       float: left;
       width: 4em;
       height: 4em;
-      margin: 1.5em 0em 0em 2em;
+      margin: 0.2em 0em 0em 1em;
       cursor: pointer; }
     .shoppingListContainer .itemList .itemContainer .deleteButton {
-      margin: 2.5em 0em 0em 0.5em;
-      width: 5em;
-      height: 2em;
-      border-radius: 2px;
-      border: 0;
       cursor: pointer;
-      background-color: red;
-      float: left; }
+      margin: 1em 0em 0em 1.5em; }
 
-footer {
-  width: 25em;
-  height: 5em;
-  margin: 0 auto; }
-  footer .checkoutButton,
-  footer .restartButton {
-    margin: 2em 0em 0em 13.5em;
-    width: 9em;
-    height: 3em;
-    border-radius: 2px;
-    border: 0;
-    cursor: pointer;
-    background-color: lightgrey;
-    display: none; }
-  footer .restartButton {
-    display: none; }
-  footer .checkoutMessage {
-    text-align: center; }
+footer .checkoutButton,
+footer .restartButton {
+  margin: 2em auto;
+  width: 10em;
+  height: 3em;
+  font-size: 0.5em;
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+  background-color: lightgrey;
+  display: none; }
+
+footer .checkoutMessage {
+  text-align: center;
+  font-size: 0.75em; }
 
 @media only screen and (min-width: 650px) {
+  html {
+    background: url("../../images/shoppingListBackground-m.jpg") no-repeat center center fixed; }
+  .mainHeader {
+    font-size: 2em; }
   .shoppingListContainer {
-    width: 38em;
-    height: 33em; }
+    width: 35em; }
+    .shoppingListContainer .receipt .receiptHeader {
+      font-size: 1.75em; }
+    .shoppingListContainer .receipt .receiptTable td {
+      padding-left: 3em; }
+    .shoppingListContainer .receipt .receiptTable .receiptTableHeaders {
+      font-size: 1.05em;
+      padding-left: 2.5em; }
+    .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(2),
+    .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(3) {
+      padding-left: 5em; }
+    .shoppingListContainer .receipt .receiptTotals p {
+      font-size: 1.1em; }
     .shoppingListContainer .itemInput {
-      width: 34em; }
+      height: 7em; }
+      .shoppingListContainer .itemInput th {
+        width: 12em;
+        font-size: 1em; }
       .shoppingListContainer .itemInput .submitButton {
-        margin: 1em 0em 0em 19.5em;
-        width: 10em; }
+        width: 10em;
+        margin-top: 2em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
-      width: 12em; }
+      width: 12em;
+      display: block;
+      margin: 0 auto; }
     .shoppingListContainer .itemList .itemContainer {
-      width: 29em;
-      height: 4em; }
+      width: 25em; }
       .shoppingListContainer .itemList .itemContainer .deleteButton {
-        margin: 1.75em 0em 0em 0em;
-        width: 7em;
-        height: 2.25em; }
+        margin: 0.65em 0em 0em 1em;
+        font-size: 1.3em; }
       .shoppingListContainer .itemList .itemContainer .itemText {
-        width: 22em;
-        margin: 0.5em 0em 0em 0em;
-        height: 3.5em; }
+        margin: 0.35em 0em 0em 0em;
+        font-size: 0.85em;
+        width: 20em; }
       .shoppingListContainer .itemList .itemContainer .itemCheckbox {
-        margin: 1em 0em 0em 2em; } }
+        margin: 0.2em 0em 0em 2em; }
+  footer .checkoutButton,
+  footer .restartButton {
+    font-size: 0.75em; }
+  footer .checkoutMessage {
+    font-size: 1em; } }
 
 @media only screen and (min-width: 900px) {
+  html {
+    background: url("../../images/shoppingListBackground-l.jpg") no-repeat center center fixed; }
   .mainHeader {
     font-size: 3em; }
   .shoppingListContainer {
@@ -158,31 +195,49 @@ footer {
     .shoppingListContainer .receipt .receiptTable {
       margin-left: 3em; }
       .shoppingListContainer .receipt .receiptTable td {
-        width: 20em; }
+        width: 20em;
+        font-size: 1.2em;
+        padding-left: 2.5em; }
+      .shoppingListContainer .receipt .receiptTable .receiptTableHeaders {
+        font-size: 1.3em;
+        padding-left: 2.5em; }
+      .shoppingListContainer .receipt .receiptTable .receiptTableHeaders:nth-child(2),
+      .shoppingListContainer .receipt .receiptTable .receiptTableHeaders:nth-child(3) {
+        padding-left: 4em; }
+      .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(2),
+      .shoppingListContainer .receipt .receiptTable .receiptBody tr td:nth-child(3) {
+        padding-left: 7em; }
+    .shoppingListContainer .receipt .receiptHeader {
+      font-size: 2.25em; }
+    .shoppingListContainer .receipt .receiptTotals p {
+      font-size: 1.25em; }
     .shoppingListContainer .itemInput {
-      width: 42em;
-      height: 7em; }
+      width: 48em;
+      height: 8em; }
       .shoppingListContainer .itemInput th {
-        font-size: 1.25em; }
+        font-size: 1.25em;
+        width: 13em; }
       .shoppingListContainer .itemInput .submitButton {
-        margin: 1em 0em 0em 25.5em;
-        width: 12em;
-        height: 3em; }
+        height: 2.75em;
+        font-size: 0.75em;
+        margin-top: 1.5em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
-      width: 15em;
-      height: 2em;
-      margin-left: 2em; }
+      width: 16em;
+      margin-left: 3em;
+      height: 1.75em; }
     .shoppingListContainer .itemList .itemContainer {
       width: 36em; }
       .shoppingListContainer .itemList .itemContainer .deleteButton {
-        width: 8em;
-        height: 2.5em; }
+        margin: 0.5em 0em 0em 1.5em;
+        font-size: 1.5em; }
       .shoppingListContainer .itemList .itemContainer .itemText {
-        width: 25em;
-        font-size: 1.0em; }
+        width: 24em;
+        font-size: 1.1em;
+        margin: -.15em 0em 0em 0em;
+        overflow: scroll; }
   footer .checkoutButton,
   footer .restartButton {
-    margin: 3em 0em 0em 13em;
-    width: 12em;
-    height: 3em; } }
+    font-size: 0.85em; }
+  footer .checkoutMessage {
+    font-size: 1.1em; } }
