@@ -63,6 +63,16 @@ html {
     height: 6em;
     margin: 0 auto;
     border-bottom: 1px solid black; }
+    .shoppingListContainer .itemInput .maxItemMessage {
+      display: block;
+      font-size: 0.8em;
+      width: 10em;
+      height: 1.5em;
+      line-height: 1.5em;
+      margin: 0 auto;
+      margin-top: 1.25em;
+      background-color: white;
+      border: 1px solid black; }
     .shoppingListContainer .itemInput th {
       width: 10em;
       height: 1em;
@@ -152,7 +162,14 @@ footer .restartButton:hover {
 
 footer .checkoutMessage {
   text-align: center;
-  font-size: 0.75em; }
+  font-size: 0.75em;
+  width: 23em;
+  margin: 0 auto;
+  background-color: white;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin-top: 1em;
+  border: 1px solid black; }
 
 @media only screen and (min-width: 650px) {
   html {
@@ -175,6 +192,9 @@ footer .checkoutMessage {
       font-size: 1.1em; }
     .shoppingListContainer .itemInput {
       height: 7em; }
+      .shoppingListContainer .itemInput .maxItemMessage {
+        font-size: 1em;
+        margin-top: 1em; }
       .shoppingListContainer .itemInput th {
         width: 12em;
         font-size: 1em; }
@@ -182,6 +202,8 @@ footer .checkoutMessage {
         margin-top: 1.2em;
         font-size: 0.7em;
         width: 10em; }
+      .shoppingListContainer .itemInput .inputTable .maxItemMessage {
+        font-size: 1.2em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
       width: 14em;
@@ -236,6 +258,8 @@ footer .checkoutMessage {
     .shoppingListContainer .itemInput {
       width: 48em;
       height: 8em; }
+      .shoppingListContainer .itemInput .maxItemMessage {
+        font-size: 1.2em; }
       .shoppingListContainer .itemInput th {
         font-size: 1.25em;
         width: 13em; }
@@ -243,6 +267,8 @@ footer .checkoutMessage {
         height: 2.75em;
         font-size: 0.75em;
         margin-top: 1.5em; }
+      .shoppingListContainer .itemInput .inputTable .maxItemMessage {
+        font-size: 1.4em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
       width: 16em;

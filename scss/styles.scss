@@ -82,6 +82,17 @@ html {
         height: 6em;
         margin: 0 auto;
         border-bottom: 1px solid black;
+        .maxItemMessage {
+            display: block;
+            font-size: 0.8em;
+            width: 10em;
+            height: 1.5em;
+            line-height: 1.5em;
+            margin: 0 auto;
+            margin-top: 1.25em;
+            background-color: white;
+            border: 1px solid black;
+        }
         th {
             width: 10em;
             height: 1em;
@@ -194,6 +205,13 @@ footer {
     .checkoutMessage {
         text-align: center;
         font-size: 0.75em;
+        width: 23em;
+        margin: 0 auto;
+        background-color: white;
+        height: 1.5em;
+        line-height: 1.5em;
+        margin-top: 1em;
+        border: 1px solid black;
     }
 }
 
@@ -235,6 +253,10 @@ footer {
         }
         .itemInput {
             height: 7em;
+            .maxItemMessage {
+                font-size: 1em;
+                margin-top: 1em;
+            }
             th {
                 width: 12em;
                 font-size: 1em;
@@ -243,6 +265,11 @@ footer {
                 margin-top: 1.2em;
                 font-size: 0.7em;
                 width: 10em;
+            }
+            .inputTable {
+                .maxItemMessage {
+                    font-size: 1.2em;
+                }
             }
         }
         .itemInput input[type="number"],
@@ -329,6 +356,9 @@ footer {
         .itemInput {
             width: 48em;
             height: 8em;
+            .maxItemMessage {
+                font-size: 1.2em;
+            }
             th {
                 font-size: 1.25em;
                 width: 13em;
@@ -337,6 +367,11 @@ footer {
                 height: 2.75em;
                 font-size: 0.75em;
                 margin-top: 1.5em;
+            }
+            .inputTable {
+                .maxItemMessage {
+                    font-size: 1.4em;
+                }
             }
         }
         .itemInput input[type="number"],
