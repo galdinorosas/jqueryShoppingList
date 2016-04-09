@@ -64,22 +64,25 @@ html {
     margin: 0 auto;
     border-bottom: 1px solid black; }
     .shoppingListContainer .itemInput th {
-      width: 7em;
+      width: 10em;
       height: 1em;
       font-size: 0.7em; }
     .shoppingListContainer .itemInput td {
-      width: 10em;
-      height: 1em;
-      padding-left: 0.5em; }
+      padding: 0; }
     .shoppingListContainer .itemInput input[type="text"],
     .shoppingListContainer .itemInput input[type="number"] {
-      width: 7em;
-      height: 1.5em;
-      text-align: center; }
+      width: 98%;
+      height: 1.7em;
+      text-align: center;
+      padding: 0;
+      border: 1px solid black; }
     .shoppingListContainer .itemInput input[type=number]::-webkit-inner-spin-button,
     .shoppingListContainer .itemInput input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0; }
+    .shoppingListContainer .itemInput input[type="number"]:focus,
+    .shoppingListContainer .itemInput input[type="text"]:focus {
+      outline: 0; }
     .shoppingListContainer .itemInput .submitButton {
       background-color: black;
       color: lightgrey;
@@ -176,11 +179,13 @@ footer .checkoutMessage {
         width: 12em;
         font-size: 1em; }
       .shoppingListContainer .itemInput .submitButton {
-        width: 10em;
-        margin-top: 2em; }
+        margin-top: 1.2em;
+        font-size: 0.7em;
+        width: 10em; }
     .shoppingListContainer .itemInput input[type="number"],
     .shoppingListContainer .itemInput input[type="text"] {
-      width: 12em;
+      width: 14em;
+      height: 2em;
       display: block;
       margin: 0 auto; }
     .shoppingListContainer .itemList .itemContainer {
@@ -242,7 +247,7 @@ footer .checkoutMessage {
     .shoppingListContainer .itemInput input[type="text"] {
       width: 16em;
       margin-left: 3em;
-      height: 1.75em; }
+      height: 2em; }
     .shoppingListContainer .itemList .itemContainer {
       width: 36em; }
       .shoppingListContainer .itemList .itemContainer .deleteButton {
